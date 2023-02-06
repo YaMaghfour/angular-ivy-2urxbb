@@ -1,0 +1,6 @@
+<div>
+  Bonjour, vous voici sur la page correspondant à votre profil utilisateur :
+  <div>email du profil : "{{ (user$ | async).email }}"</div>
+  <div>nom du profil : "{{ (user$ | async).first_name }}"</div>
+  <div>prénom du profil : "{{ (user$ | async).last_name }}"</div>
+</div>
