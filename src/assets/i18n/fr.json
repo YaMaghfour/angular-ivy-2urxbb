@@ -1,4 +1,9 @@
 {
+    "Commun": {
+        "Reset": "Réintialiser",
+        "Submit": "Soumettre",
+        "RequiredFields": "(Les champs marqués avec <u>*</u> sont obligatoires)"
+    },
     "Navbar": {
         "Home": "Accueil",
         "FullStackDeveloper": "Développeur full stack",
@@ -32,7 +37,8 @@
             "Picture": "Photo"
         },
         "Actions": "Actions",
-        "NothingToShowNow": "Rien à afficher pour l'instant"
+        "NothingToShowNow": "Rien à afficher pour l'instant",
+        "AddNewUser": "Ajouter un nouveau utilisateur"
     },
     "PageNotFound": {
         "Error404": "Erreur 404 - Page introuvable",

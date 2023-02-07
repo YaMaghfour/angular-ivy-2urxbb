@@ -1,0 +1,71 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a routerLink="/users">{{ 'UsersPage.ListOfUsers' | translate }}</a>
+                    </li>
+                    <li class="breadcrumb-item active">{{ 'UsersPage.AddNewUser' | translate }}</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container">
+        <div class="card card-secondary">
+            <div class="card-header">
+                <h3 class="card-title">{{ "UsersPage.AddNewUser" | translate }} <span
+                        [innerHTML]='"Commun.RequiredFields" | translate'></span></h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="userForm" (ngSubmit)="createNewUser();">
+                <div class="card-body">
+                    <div class="form-row col-md-12">
+                        <div class="form-group col-md-6">
+                            <label for="inputFirstName">{{ "UsersPage.Informations.FirstName" | translate }} *</label>
+                            <input type="text" maxlength="30" name="FirstName" [ngClass]="{
+                        'is-invalid' : userForm.controls.FirstName.touched && userForm.controls.FirstName.invalid,
+                        'is-valid' : userForm.controls.FirstName.touched && userForm.controls.FirstName.valid
+                    }" formControlName="FirstName" class="form-control" id="inputFirstName"
+                                placeholder="{{ 'UsersPage.Informations.FirstName' | translate }}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputLastName">{{ 'UsersPage.Informations.LastName' | translate }} *</label>
+                            <input type="text" maxlength="30" name="LastName" [ngClass]="{
+                        'is-invalid' : userForm.controls.LastName.touched && userForm.controls.LastName.invalid,
+                        'is-valid' : userForm.controls.LastName.touched && userForm.controls.LastName.valid
+                    }" formControlName="LastName" class="form-control" id="inputLastName"
+                                placeholder="{{ 'UsersPage.Informations.LastName' | translate }}">
+                        </div>
+                    </div>
+                    <div class="form-row col-md-12">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">{{ "UsersPage.Informations.Email" | translate }} *</label>
+                            <input type="email" maxlength="255" name="Email" [ngClass]="{
+                                'is-invalid' : userForm.controls.Email.touched && userForm.controls.Email.invalid,
+                                'is-valid' : userForm.controls.Email.touched && userForm.controls.Email.valid
+                                }" formControlName="Email" class="form-control" id="inputEmail"
+                                placeholder="{{ 'UsersPage.Informations.Email' | translate }}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">{{ "UsersPage.Informations.Picture" | translate }}</label>
+                            <input type="file" name="avatar" class="form-control" id="inputAvatar"
+                                placeholder="{{ 'UsersPage.Informations.Picture' | translate }}">
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary float-right">{{
+                        'Commun.Submit' | translate }}</button>
+                    <button type="submit" (click)="userForm.reset();" class="btn btn-danger">{{ 'Commun.Reset' |
+                        translate }}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

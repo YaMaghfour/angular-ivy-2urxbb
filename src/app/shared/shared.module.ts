@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { DataTablesModule } from 'angular-datatables';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CommonModule,
     DataTablesModule,
     NgxPaginationModule,
+    ReactiveFormsModule,
     TranslateModule
   ]
 })
