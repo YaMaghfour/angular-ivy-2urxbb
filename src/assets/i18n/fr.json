@@ -5,7 +5,8 @@
         "Languages": {
             "English": "Anglais",
             "French": "Français"
-        }
+        },
+        "Search": "Recherchez ..."
     },
     "SideMenu": {
         "Users": "Utilisateurs",
@@ -32,5 +33,13 @@
         },
         "Actions": "Actions",
         "NothingToShowNow": "Rien à afficher pour l'instant"
+    },
+    "PageNotFound": {
+        "Error404": "Erreur 404 - Page introuvable",
+        "NotFound": "Page introuvable",
+        "OopsSpeech": "Oops! Page introuvable.",
+        "Description_Suffix": "Nous n'avons pas pu trouver la page que vous cherchez. En attendant, vous pouvez ",
+        "Description_Link": "retourner vers l'acceuil",
+        "Description_Prefix": "ou cherchez la page en utilisant le formulaire en dessous."
     }
 }

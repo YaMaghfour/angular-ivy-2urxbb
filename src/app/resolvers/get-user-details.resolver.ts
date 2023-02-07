@@ -18,6 +18,9 @@ export class GetUserDetailsResolver implements Resolve<UserApi> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<UserApi> {
     try {
       const userId = Number(route.paramMap.get('id'));
+      if (isNaN(userId))
+        throw new SyntaxError("User ID invalid");
+
       return this.userService.getUserFromId(userId);
     }
     catch {
