@@ -1,0 +1,69 @@
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a routerLink="/" class="nav-link">{{"Navbar.Home" | translate }}</a>
+        </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <!-- USER -->
+        <li class="nav-item dropdown user-menu">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="https://media.licdn.com/dms/image/C4D03AQGO9Ytdaoam4Q/profile-displayphoto-shrink_800_800/0/1632001089435?e=2147483647&v=beta&t=53GYI8DPdvEPD4LG83ieo5OCSxN8CYy3Ns6pJM5ZAOs"
+                    class="user-image img-circle elevation-2" alt="User Image">
+                <span class="d-none d-md-inline">MAGHFOUR Yassine</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <!-- User image -->
+                <li class="user-header bg-primary">
+                    <img src="https://media.licdn.com/dms/image/C4D03AQGO9Ytdaoam4Q/profile-displayphoto-shrink_800_800/0/1632001089435?e=2147483647&v=beta&t=53GYI8DPdvEPD4LG83ieo5OCSxN8CYy3Ns6pJM5ZAOs"
+                        class="img-circle elevation-2" alt="User Image">
+
+                    <p>
+                        MAGHFOUR Yassine
+                        <small class="mt-1">{{ "Navbar.FullStackDeveloper" | translate }}</small>
+                    </p>
+                    <!-- Menu Footer-->
+                </li>
+                <li class="user-footer">
+                    <a href="https://www.linkedin.com/in/yassinemaghfour/" target="_blank"
+                        class="btn btn-default btn-flat">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/yassine.mag4/" target="_blank"
+                        class="btn btn-default btn-flat float-right">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <!-- Languages-->
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                <i *ngIf="lang == 'en'" class="flag-icon flag-icon-us"></i>
+                <i *ngIf="lang == 'fr'" class="flag-icon flag-icon-fr"></i>
+                <!-- <i *ngIf="lang == 'es'" class="flag-icon flag-icon-es"></i> -->
+            </a>
+            <div class="dropdown-menu dropdown-menu-right p-0" id="list-lang">
+                <button (click)="ChangeLang('en')" class="dropdown-item en">
+                    <i class="flag-icon flag-icon-us mr-2"></i> {{ "Navbar.Languages.English" | translate }}
+                </button>
+                <button (click)="ChangeLang('fr')" class="dropdown-item fr">
+                    <i class="flag-icon flag-icon-fr mr-2"></i> {{ "Navbar.Languages.French" | translate }}
+                </button>
+                <!-- <button (click)="ChangeLang('es')" class="dropdown-item es">
+            <i class="flag-icon flag-icon-es mr-2"></i> {{ "Navbar.Languages.Spanish" | translate }}
+          </button> -->
+            </div>
+        </li>
+    </ul>
+</nav>

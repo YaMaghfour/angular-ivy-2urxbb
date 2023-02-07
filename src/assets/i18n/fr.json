@@ -1,0 +1,15 @@
+{
+    "Navbar": {
+        "Home": "Accueil",
+        "FullStackDeveloper": "Développeur full stack",
+        "LinkedInProfile": "LinkedIn",
+        "FacebookProfile": "Facebook"
+    },
+    "SideMenu": {
+        "Users": "Utilisateurs",
+        "UsersList": "Liste utilisateurs"
+    },
+    "Footer": {
+        "Copyright": "© {{ year }} Natixis All Rights Reserved"
+    }
+}
