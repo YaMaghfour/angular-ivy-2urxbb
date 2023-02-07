@@ -28,7 +28,7 @@ export class UsersListComponent implements OnInit {
       search: false,
       searching: false,
       info: false,
-      ordering: true,
+      ordering: false,
       processing: true,
       scrollX: true,
       autoWidth: false
