@@ -18,7 +18,7 @@ export class UserService {
   }
 
   public getUserFromId(userId): Observable<UserApi> {
-    return this.http.get<any>(`${this.apiUrl}/users/${userId}`);
+    return this.http.get<UserApi>(`${this.apiUrl}/users/${userId}`);
   }
 
   private getAccountFromId(accountId: number): Observable<Account> {

@@ -1,0 +1,82 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a routerLink="/users">{{ 'UsersPage.ListOfUsers' | translate }}</a>
+                    </li>
+                    <li class="breadcrumb-item active">{{ userApiResult.data.first_name }} {{
+                        userApiResult.data.last_name}}</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content pl-5 pr-5 pb-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+                        <div class="text-center">
+                            <img class="profile-user-img img-fluid img-circle" [src]="userApiResult.data.avatar"
+                                alt="User profile picture">
+                        </div>
+
+                        <h3 class="profile-username text-center">{{ userApiResult.data.first_name }} {{
+                            userApiResult.data.last_name }}</h3>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">{{ "UsersPage.UserInformations" | translate}}</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <strong><i class="fas fa-id-card mr-1"></i> {{ "UsersPage.Informations.FirstName" |
+                            translate}}</strong>
+                        <p class="text-muted">
+                            <span>{{ userApiResult.data.first_name }}</span>
+                        </p>
+                        <hr>
+                        <strong><i class="fas fa-id-card mr-1"></i> {{ "UsersPage.Informations.LastName" |
+                            translate}}</strong>
+                        <p class="text-muted">
+                            <span>{{ userApiResult.data.last_name }}</span>
+                        </p>
+                        <hr>
+                        <strong><i class="fas fa-mail-bulk mr-1"></i> {{ "UsersPage.Informations.Email" |
+                            translate}}</strong>
+                        <p class="text-muted">
+                            <span>{{ userApiResult.data.email }}</span>
+                        </p>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <div class="col-md-9 col-sm-12">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item"><a class="nav-link active" href="#user-activities"
+                                    data-bs-toggle="tab">{{
+                                    "UsersPage.UserActivities" | translate}}</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="user-activities">
+                                <span>{{ "UsersPage.NothingToShowNow" | translate }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
