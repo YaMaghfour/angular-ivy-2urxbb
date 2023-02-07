@@ -3,11 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { UsersComponent } from './pages/users/users.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
@@ -34,7 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       defaultLanguage: "fr"
     }),
   ],
-  declarations: [AppComponent, UsersComponent, ProfileComponent, NavbarComponent, FooterComponent, SideMenuComponent],
+  declarations: [AppComponent, NavbarComponent, FooterComponent, SideMenuComponent],
 
   bootstrap: [AppComponent],
   providers: [{ provide: 'apiUrl', useValue: 'https://reqres.in/api' }],

@@ -4,16 +4,17 @@ import { Observable } from 'rxjs';
 import { Account } from '../models/account.model';
 import { Person } from '../models/person.model';
 import { UserApi } from '../models/user-api.model';
-import { UsersListApi } from '../models/users-list-api.model';
+import { User } from '../models/user.model';
+import { PaginationApiModel } from '../models/users-list-api.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  constructor(@Inject('apiUrl') private apiUrl, private http: HttpClient) {}
+  constructor(@Inject('apiUrl') private apiUrl, private http: HttpClient) { }
 
-  public getUsers(): Observable<UsersListApi> {
-    return this.http.get<any>(`${this.apiUrl}/users`);
+  public getUsers(page: number = 1, per_page: number = 10): Observable<PaginationApiModel<User>> {
+    return this.http.get<any>(`${this.apiUrl}/users?page=${page}&per_page=${per_page}`);
   }
 
   public getUserFromId(userId): Observable<UserApi> {

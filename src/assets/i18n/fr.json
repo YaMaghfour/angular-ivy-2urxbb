@@ -13,5 +13,21 @@
     },
     "Footer": {
         "Copyright": "© {{ year }} Natixis - Tous les droits réservés"
+    },
+    "DataTable": {
+        "Paginate": {
+            "Last": "Précédent",
+            "Next": "Suivant"
+        }
+    },
+    "UsersPage": {
+        "ListOfUsers": "La liste des utilisateurs",
+        "Informations": {
+            "FirstName": "Prénom",
+            "LastName": "Nom",
+            "Email": "Email",
+            "Picture": "Photo"
+        },
+        "Actions": "Actions"
     }
 }
