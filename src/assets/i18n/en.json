@@ -1,0 +1,17 @@
+{
+    "Navbar": {
+        "Home": "Home",
+        "FullStackDeveloper": "Full Stack Developer",
+        "Languages": {
+            "English": "English",
+            "French": "French"
+        }
+    },
+    "SideMenu": {
+        "Users": "Users",
+        "UsersList": "Users list"
+    },
+    "Footer": {
+        "Copyright": "© {{ year }} Natixis All Rights Reserved"
+    }
+}
