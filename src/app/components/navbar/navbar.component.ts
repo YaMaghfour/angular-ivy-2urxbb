@@ -20,6 +20,7 @@ export class NavbarComponent {
     $(`#list-lang .${lang}`).addClass("active");
 
     this.translateService.use(lang);
+    this.lang = lang
   }
 
 }
