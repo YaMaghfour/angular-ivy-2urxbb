@@ -1,17 +1,51 @@
 {
+    "Commun": {
+        "Reset": "Reset",
+        "Submit": "Submit",
+        "RequiredFields": "(Fields with <u>*</u> are mandatory)"
+    },
     "Navbar": {
         "Home": "Home",
         "FullStackDeveloper": "Full Stack Developer",
         "Languages": {
             "English": "English",
             "French": "French"
-        }
+        },
+        "Search": "Search ..."
     },
     "SideMenu": {
         "Users": "Users",
-        "UsersList": "Users list"
+        "UsersList": "Users List"
     },
     "Footer": {
-        "Copyright": "© {{ year }} Natixis All Rights Reserved"
+        "Copyright": "© {{ year }} Natixis - All right reserved"
+    },
+    "DataTable": {
+        "Paginate": {
+            "Last": "Last",
+            "Next": "Next"
+        }
+    },
+    "UsersPage": {
+        "ListOfUsers": "Users list",
+        "UserInformations": "User information",
+        "UserActivities": "Activities",
+        "Informations": {
+            "FirstName": "First name",
+            "LastName": "Last name",
+            "Email": "Email",
+            "Picture": "Picture"
+        },
+        "Actions": "Actions",
+        "NothingToShowNow": "Nothing to show in moment",
+        "AddNewUser": "Add new user"
+    },
+    "PageNotFound": {
+        "Error404": "404 Error - Page not found",
+        "NotFound": "Page not found",
+        "OopsSpeech": "Oops! Page not found.",
+        "Description_Suffix": "We couldn't find the page you are looking for. You can ",
+        "Description_Link": "return to home page",
+        "Description_Prefix": "or search the page using the form below."
     }
 }

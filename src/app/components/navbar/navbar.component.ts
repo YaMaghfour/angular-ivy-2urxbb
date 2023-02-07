@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import * as $ from 'jquery';
 
@@ -7,7 +7,7 @@ import * as $ from 'jquery';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements AfterViewInit {
 
   lang: string = "fr";
 
@@ -15,10 +15,17 @@ export class NavbarComponent {
     this.lang = this.translateService.currentLang;
   }
 
-  ChangeLang(lang: string) {
+  ngAfterViewInit(): void {
+    this.setActiveClass(this.lang);
+  }
+
+  setActiveClass(lang: string) {
     $("#list-lang .dropdown-item").removeClass("active");
     $(`#list-lang .${lang}`).addClass("active");
+  }
 
+  ChangeLang(lang: string) {
+    this.setActiveClass(lang);
     this.translateService.use(lang);
     this.lang = lang
   }
